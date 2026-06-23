@@ -3,6 +3,8 @@ package com.example.luciano.inventoryservice.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,6 +22,8 @@ public class Event {
     private Long totalCapacity;
 
     private Long leftCapacity;
+
+    private BigDecimal ticketPrice;
 
     @ManyToOne
     @JoinColumn(name = "venue_id")

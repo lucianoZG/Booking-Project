@@ -39,4 +39,17 @@ public class InventoryService {
                 .totalCapacity(venue.getTotalCapacity())
                 .build();
     }
+
+    public EventInventoryResponseDto getEventInventory(Long eventId) {
+        final Event event = eventRepository.findById(eventId)
+                .orElse(null);
+
+        return EventInventoryResponseDto.builder()
+                .eventId(event.getId())
+                .event(event.getName())
+                .ticketPrice(event.getTicketPrice())
+                .capacity(event.getLeftCapacity())
+                .venue(event.getVenue())
+                .build();
+    }
 }
