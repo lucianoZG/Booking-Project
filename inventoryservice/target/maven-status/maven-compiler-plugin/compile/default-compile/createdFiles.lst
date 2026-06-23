@@ -1,0 +1,13 @@
+com\example\luciano\inventoryservice\model\dto\VenueInventoryResponseDto$VenueInventoryResponseDtoBuilder.class
+com\example\luciano\inventoryservice\repository\IVenueRepository.class
+com\example\luciano\inventoryservice\repository\IEventRepository.class
+com\example\luciano\inventoryservice\model\dto\EventInventoryResponseDto$EventInventoryResponseDtoBuilder.class
+com\example\luciano\inventoryservice\model\dto\EventInventoryResponseDto.class
+com\example\luciano\inventoryservice\InventoryserviceApplication.class
+com\example\luciano\inventoryservice\model\entity\Event.class
+com\example\luciano\inventoryservice\model\entity\Venue$VenueBuilder.class
+com\example\luciano\inventoryservice\model\entity\Event$EventBuilder.class
+com\example\luciano\inventoryservice\model\dto\VenueInventoryResponseDto.class
+com\example\luciano\inventoryservice\controller\InventoryController.class
+com\example\luciano\inventoryservice\model\entity\Venue.class
+com\example\luciano\inventoryservice\service\InventoryService.class

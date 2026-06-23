@@ -1,0 +1,9 @@
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\controller\InventoryController.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\InventoryserviceApplication.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\model\dto\EventInventoryResponseDto.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\model\dto\VenueInventoryResponseDto.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\model\entity\Event.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\model\entity\Venue.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\repository\IEventRepository.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\repository\IVenueRepository.java
+F:\Luciano\Programacion\Java\Booking microservices project\inventoryservice\src\main\java\com\example\luciano\inventoryservice\service\InventoryService.java
