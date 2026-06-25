@@ -12,8 +12,16 @@ public class GlobalExceptionHandler {
     public ProblemDetail handleResourceNotFoundException(ResourceNotFoundException ex) {
         ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
 
-        // Configuramos los campos estándar
         problemDetail.setTitle("Resource not found");
+
+        return problemDetail;
+    }
+
+    @ExceptionHandler(BusinessRuleException.class)
+    public ProblemDetail handleBusinessRuleException(BusinessRuleException ex) {
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage());
+
+        problemDetail.setTitle("Error validating business rule");
 
         return problemDetail;
     }

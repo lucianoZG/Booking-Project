@@ -6,13 +6,13 @@ import com.example.luciano.inventoryservice.model.entity.Event;
 import com.example.luciano.inventoryservice.model.entity.Venue;
 import com.example.luciano.inventoryservice.repository.IEventRepository;
 import com.example.luciano.inventoryservice.repository.IVenueRepository;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class InventoryService {
 
     private final IEventRepository eventRepository;

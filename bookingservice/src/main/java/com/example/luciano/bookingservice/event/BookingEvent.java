@@ -1,18 +1,19 @@
-package com.example.luciano.bookingservice.model.dto;
+package com.example.luciano.bookingservice.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
-@Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class BookingResponse {
-    private Long bookingId;
+@AllArgsConstructor
+@Builder
+public class BookingEvent {
     private Long userId;
     private Long eventId;
     private Long ticketCount;
-    private String ticketPrice;
+    private BigDecimal totalPrice;
 }
