@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/v1/inventory")
 public class InventoryController {
 
-    private InventoryService inventoryService;
+    private final InventoryService inventoryService;
 
     @GetMapping("/events")
     public ResponseEntity<List<EventInventoryResponseDto>> inventoryGetAllEvents() {
