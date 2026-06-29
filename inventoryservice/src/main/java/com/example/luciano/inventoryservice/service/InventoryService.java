@@ -7,12 +7,14 @@ import com.example.luciano.inventoryservice.model.entity.Venue;
 import com.example.luciano.inventoryservice.repository.IEventRepository;
 import com.example.luciano.inventoryservice.repository.IVenueRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class InventoryService {
 
     private final IEventRepository eventRepository;
@@ -51,5 +53,15 @@ public class InventoryService {
                 .capacity(event.getLeftCapacity())
                 .venue(event.getVenue())
                 .build();
+    }
+
+
+    public void updateEventCapacity(final Long eventId, final Long ticketsBooked) {
+        final Event event = eventRepository.findById(eventId)
+                .orElse(null);
+
+        event.setLeftCapacity(event.getLeftCapacity() - ticketsBooked);
+        eventRepository.saveAndFlush(event);
+        log.info("Updated event capacity for event id: {} with tickets booked: {}", eventId, ticketsBooked);
     }
 }

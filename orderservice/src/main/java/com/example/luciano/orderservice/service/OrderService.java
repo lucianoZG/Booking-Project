@@ -1,6 +1,7 @@
 package com.example.luciano.orderservice.service;
 
 import com.example.luciano.bookingservice.event.BookingEvent;
+import com.example.luciano.orderservice.client.InventoryServiceClient;
 import com.example.luciano.orderservice.model.entity.Order;
 import com.example.luciano.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class OrderService {
 
     private final OrderRepository orderRepository;
+    private final InventoryServiceClient inventoryServiceClient;
 
     @KafkaListener(topics = "booking", groupId = "order-service")
     public void orderEvent(BookingEvent bookingEvent) {
@@ -23,6 +25,8 @@ public class OrderService {
         Order order = createOrder(bookingEvent);
         orderRepository.saveAndFlush(order);
         //Update inventory
+        inventoryServiceClient.updateInventory(order.getEventId(), order.getTicketCount());
+        log.info("Inventory updated for event: {}, less tickets: {}", order.getEventId(), order.getTicketCount());
     }
 
     private Order createOrder(BookingEvent bookingEvent) {

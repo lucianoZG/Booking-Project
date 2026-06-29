@@ -28,7 +28,7 @@ public class Order {
     private Long ticketCount;
 
     @CreationTimestamp
-    @Column(name = "placed_at", updatable = false, nullable = false)
+    @Column(name = "place_at", updatable = false, nullable = false)
     private LocalDateTime place_at;
 
     @Column(name = "customer_id")
